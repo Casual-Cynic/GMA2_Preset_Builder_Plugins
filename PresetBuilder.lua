@@ -103,7 +103,7 @@ local function StoreCueStack(grp, preBegin, preCount, offset)
         gcmd("Group " .. grp .. " At Preset " .. PresetPoolNum .. "." .. (preBegin + i))
         gcmd("Store Executor " .. ExecutorStartPage .. "." .. (ExecutorStartExec + offset) .. " Cue " .. (1+i))
         --Label Executor 30.1  Cue 1 "Home"
-        transferLabel("Preset 2." .. (preBegin + i), "Executor " .. ExecutorStartPage .. "." .. (ExecutorStartExec + offset) .. " Cue " .. (1+i))
+        transferLabel("Preset " .. PresetPoolNum .. "." .. (preBegin + i), "Executor " .. ExecutorStartPage .. "." .. (ExecutorStartExec + offset) .. " Cue " .. (1+i))
     end
     gcmd("Appearance Executor " .. ExecutorStartPage .. "." .. (ExecutorStartExec + offset) .. PresetCueStackColors[PresetPoolNum])
 end
